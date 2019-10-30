@@ -41,8 +41,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.get-extension-name.outputs.package-name }}
-        release_name: ${{ steps.get-extension-name.outputs.package-name }}
+        tag_name: ${{ steps.get-package-name.outputs.package-name }}
+        release_name: ${{ steps.get-package-name.outputs.package-name }}
         draft: false
         prerelease: false
     - name: Upload release asset
